@@ -10,6 +10,6 @@ package jogo.da.velha;
  * @author umcan
  */
 public class IA {
-    char[][] tabuleiro;
+    private char[][] tabuleiro;
     
 }
