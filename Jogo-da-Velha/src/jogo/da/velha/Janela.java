@@ -22,6 +22,7 @@ public class Janela extends JPanel{
     private char[][] tabuleiro;
     
     public Janela(){
+        tabuleiro=new char[3][3];
         this.setVisible(true);
         this.setBackground(Color.WHITE);
         for (int I=0; I<=2; I++){
@@ -35,11 +36,19 @@ public class Janela extends JPanel{
     public void paintComponent(Graphics g) {
 
        super.paintComponent(g);
-       g.drawLine(0, this.getHeight()/3, this.getWidth(), (this.getHeight()/3));
-       g.drawLine(0, (this.getHeight()/3)*2, this.getWidth(), (this.getHeight()/3)*2);
-       g.drawLine(this.getWidth()/3, 0, this.getWidth()/3, this.getHeight());
-       g.drawLine((this.getWidth()/3)*2, 0, (this.getWidth()/3)*2, this.getHeight());
+       g.drawLine(0, 200, 800, 200);
+       g.drawLine(0, 400, 800, 400);
+       g.drawLine(267, 0, 267, 600);
+       g.drawLine(533, 0, 533, 600);
+       
        
        
     }  
+    private void desenharJog(char t, Graphics g, int x, int y){
+        switch (t){
+           case 'X': imgX.paintIcon(this, g, x, y); break;
+           case 'O': imgO.paintIcon(this, g, x, y); break;
+           case '.': break;
+       }
+    }
 }

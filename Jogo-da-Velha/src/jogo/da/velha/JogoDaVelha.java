@@ -23,6 +23,7 @@ public class JogoDaVelha {
         fr.add(janela);
         janela.repaint();
         fr.setSize(800, 600);
+        fr.setResizable(false);
         fr.setVisible(true);
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
